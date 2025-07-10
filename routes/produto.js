@@ -75,7 +75,7 @@ routes.put('/:id', async(req, res) => {
   // Se nenhum produto foi encontrado para atualizar, retorna 404
   if(result.rows.length === 0){
     return res.status(404).json({
-      mensagem: 'Cliente não encontrado.'});
+      mensagem: 'Produto não encontrado.'});
   }
 
   // Retorna o produto atualizado
@@ -110,12 +110,12 @@ routes.delete('/:id', async ( req, res) => {
   // Se nenhum produto foi encontrado para excluir, retorna 404
   if(result.rows.length === 0){
     return res.status(404).json({
-      mensagem: 'Cliente não encontrado.'});
+      mensagem: 'Produto não encontrado.'});
   }
 
   // Retorna mensagem de sucesso na exclusão
   res.status(200).json({
-    mensagem: `Cliente com ID ${id} foi excluído com sucesso`});
+    mensagem: `Produto com ID ${id} foi excluído com sucesso`});
 });
 
 // Exporta o módulo com as rotas para ser usado em outros arquivos
